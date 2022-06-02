@@ -43,7 +43,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-06-01T18:39:21.000Z">
-<meta property="article:modified_time" content="2022-06-01T18:51:08.804Z">
+<meta property="article:modified_time" content="2022-06-02T01:41:58.762Z">
 <meta property="article:author" content="Captain686">
 <meta property="article:tag" content="code">
 <meta property="article:tag" content="nodejs">
@@ -1752,7 +1752,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"/js/plugins/parallax.8bf0ab10.js","rightMenu":"/js/plugins/rightMenu.d9437285.js","rightMenus":"/js/plugins/rightMenus.cd02aa19.js","sites":"/js/plugins/tags/sites.76bf19b8.js","friends":"/js/plugins/tags/friends.f372da57.js","contributors":"/js/plugins/tags/contributors.aec80453.js","search":"/js/search/hexo.0e52f222.js"},"css":{"style":"/css/style.b1f5c748.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1654110762941),
+    lastupdate: new Date(1654160850805),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2523,7 +2523,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="Picgo-uploader"><a href="#Picgo-uploader" class="headerlink" title="Picgo uploader"></a>Picgo uploader</h1><blockquote>
+    <div class="story post-story"><h2 id="Picgo-uploader"><a href="#Picgo-uploader" class="headerlink" title="Picgo uploader"></a>Picgo uploader</h2><blockquote>
 <p>🙈填一下一年前挖下的坑</p>
 </blockquote>
 <p>最近重新看了一下PicGo的开发文档发现不是特别难，直接开搞</p>
@@ -2556,13 +2556,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>我们主要写的部分在</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这部分主要根据实际上传请求体进行构造，需要注意的点是headers里面不能有accept-encoding: gzip, deflate, br</span></span><br><span class="line"><span class="comment">//如果gzip出现在headers将会导致下面的请求返回数据无法解析</span></span><br><span class="line"><span class="keyword">const</span> postOptions = (fileName, image)</span><br><span class="line"></span><br><span class="line"><span class="comment">//这部分主要进行图片数据的传递与返回体的数据解析</span></span><br><span class="line"><span class="comment">//图片数据的传递在buffer和base64值二选一即可，具体根据图片上传数据决定</span></span><br><span class="line"><span class="keyword">const</span> handle = <span class="keyword">async</span> (ctx)</span><br></pre></td></tr></table></figure>
 <p>一个简单的uploader总共需要60行左右代码就能搞定<br>基本都是一个模板，稍微修改一下就可以用</p>
-<div class="story post-story"><h2 id="🤖About"><a href="#🤖About" class="headerlink" title="🤖About"></a>🤖About</h2><blockquote>
+</div><div class="story post-story"><h2 id="🤖About"><a href="#🤖About" class="headerlink" title="🤖About"></a>🤖About</h2><blockquote>
 <p>picgo-plugin-imgbb采用imgbb作为图床，图片大小最大支持35M</p>
 </blockquote>
 <p>图床示例</p>
 <p><img src="https://i.ibb.co/gPNV4GN/123915-1642480755aebf.jpg" class="lazyload" data-srcset="https://i.ibb.co/gPNV4GN/123915-1642480755aebf.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="123915-1642480755aebf"></p>
-<p>🚀 Use</p>
-<ul>
+</div><div class="story post-story"><h2 id="🚀-Use"><a href="#🚀-Use" class="headerlink" title="🚀 Use"></a>🚀 Use</h2><ul>
 <li>CLI安装</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">picgo install imgbb</span><br><span class="line">picgo use uploader</span><br></pre></td></tr></table></figure>
@@ -2607,7 +2606,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-02T02:51:08+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-02T09:41:58+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年6月2日</p>
@@ -2688,6 +2687,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
   
+    <div class="prev-next">
+      
+        <a class='prev' href='/2022/06/02/%E5%86%85%E7%BD%91%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>内网信息收集</p>
+          <p class='content'>信息收集是否在域
+ipconfig
+
+
+查看网关IP地址，DNS的ip地址、域名、本机是否和DNS服务器处于同一网段
+ipconfig /all查看DNS后缀与DNS后缀搜索列表
+
+
+nsloo...</p>
+        </a>
+      
+      
+    </div>
+  
   <!-- Custom Files postEnd begin-->
   
   <!-- Custom Files postEnd end-->
@@ -2732,7 +2749,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%A4%96About"><span class="toc-text">🤖About</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Picgo-uploader"><span class="toc-text">Picgo uploader</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%A4%96About"><span class="toc-text">🤖About</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%9A%80-Use"><span class="toc-text">🚀 Use</span></a></li></ol>
     </div>
   </section>
 
@@ -3500,7 +3517,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"https://captain686.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Captain686","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://captain686.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://captain686.github.io/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"https://captain686.github.io/2022/06/02/Picgo插件/","name":"Picgo插件"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"https://captain686.github.io/","keywords":null,"description":"Blog","author":{"@type":"Person","name":"Captain686","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://captain686.github.io/","description":"Blog"},"publisher":{"@type":"Organization","name":"Hexo","url":"https://captain686.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://captain686.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Picgo插件","description":"Blog","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://captain686.github.io/2022/06/02/Picgo%E6%8F%92%E4%BB%B6/"},"author":{"@type":"Person","name":"Captain686","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://captain686.github.io/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://captain686.github.io/2022/06/02/Picgo%E6%8F%92%E4%BB%B6/","wordCount":0,"datePublished":"2022-06-01T18:39:21.000Z","dateModified":"2022-06-01T18:51:08.804Z","keywords":"code,nodejs","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"https://captain686.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Captain686","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://captain686.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://captain686.github.io/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"https://captain686.github.io/2022/06/02/Picgo插件/","name":"Picgo插件"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"https://captain686.github.io/","keywords":null,"description":"Blog","author":{"@type":"Person","name":"Captain686","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://captain686.github.io/","description":"Blog"},"publisher":{"@type":"Organization","name":"Hexo","url":"https://captain686.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://captain686.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Picgo插件","description":"Blog","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://captain686.github.io/2022/06/02/Picgo%E6%8F%92%E4%BB%B6/"},"author":{"@type":"Person","name":"Captain686","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://captain686.github.io/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://captain686.github.io/2022/06/02/Picgo%E6%8F%92%E4%BB%B6/","wordCount":0,"datePublished":"2022-06-01T18:39:21.000Z","dateModified":"2022-06-02T01:41:58.762Z","keywords":"code,nodejs","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
